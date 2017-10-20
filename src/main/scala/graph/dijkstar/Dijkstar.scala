@@ -35,14 +35,14 @@ class Dijkstar {
       queue.enqueue(tmp: _*)
     }
 
-    var list = List.empty[String]
+    var path = List.empty[String]
     var tmp = Option(e)
     while (tmp.get.name != s.name) {
-      list = tmp.get.name :: list
+      path = tmp.get.name :: path
       tmp = tmp.get.previousNode
     }
 
-    (e.distance, (s.name :: list).mkString(" --> "))
+    (e.distance, (s.name :: path).mkString(" --> "))
   }
 
   private def relax(edge: Edge, n: Node): Unit = {
