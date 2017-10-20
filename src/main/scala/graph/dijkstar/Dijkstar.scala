@@ -1,6 +1,5 @@
 package graph.dijkstar
 
-import graph.model.ColorEnum.WHITE
 import graph.model.{Edge, Graph, Node}
 
 import scala.collection.mutable
@@ -53,10 +52,4 @@ class Dijkstar {
     }
   }
 
-}
-
-object Dijkstar {
-  def main(args: Array[String]): Unit = {
-
-  }
 }
